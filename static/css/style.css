@@ -1,0 +1,555 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,300,400,700');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+
+    background-color: #f8f8f8;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+
+    max-width: 1200px;
+    min-height: 100%;
+    margin: 0 auto;
+}
+
+.content {
+    flex: 1;
+}
+
+header {
+    display: flex;
+
+    min-height: 100px;
+    margin-bottom: 20px;
+    /*    max-width: 1024px;*/
+
+    border-bottom: 1px solid darkgrey;
+    background-color: #e6e67282;
+
+    justify-content: center;
+    align-content: center;
+}
+
+
+.menu {
+    display: flex;
+
+    list-style-type: none;
+
+}
+
+.menu a {
+    font-size: 20px;
+    font-weight: 700;
+
+    display: block;
+
+    padding: 20px 13px;
+
+    text-align: right;
+    text-decoration: none;
+
+    color: #8c8c8c;
+}
+
+.menu li {
+    line-height: 30px;
+
+    height: 30px;
+}
+
+.menu a:hover {
+    color: black;
+}
+
+.menu ul {
+    display: flex;
+
+    justify-content: space-around;
+}
+
+.menu ul a {
+    font-size: 10px;
+}
+
+.menu ul li {
+    list-style-type: none;
+}
+
+.menu li:hover ul {
+    display: block;
+}
+
+.registr_form h1 {
+
+    font-weight: 700;
+    color: #CD853F;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.registr_form h1,
+.main_table {
+    text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
+    font-size: 30px;
+}
+
+caption {
+    color: #8B3A3A;
+    font-size: 20px;
+    font-weight: 800;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.invalid {
+    border: 1px solid red;
+}
+
+.registr_form {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+}
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    border: 4px solid #8b4513;
+}
+
+.table_view_comments {
+    max-width: 1024px;
+}
+
+caption {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.View_comments tr:nth-child(2n) {
+    background: #e6e68282;
+}
+
+.active_row {
+    font-weight: 900;
+
+    background-color: #e6ae7282;
+}
+
+td {
+    max-width: 200px;
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
+    vertical-align: middle;
+    word-wrap: break-word;
+    border: 2px solid #8b4513;
+}
+
+th {
+    color: #8b3a3a;
+    border: 2px solid #8b4513;
+    height: 70px;
+    padding: 10px;
+}
+
+.view_stat {
+    width: 500px;
+}
+
+.view_stat td {
+    color: darkblue;
+    text-decoration: underline;
+}
+
+.view_stat td:nth-child(2n) {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.manage_comments {
+    display: flex;
+    justify-content: space-between;
+}
+
+.limit, #limit {
+    font-size: 20px;
+/*     padding: 10px 50px 10px 10px;*/
+    margin-top: 40px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+#prev {
+    margin-right:20px; 
+}
+
+#prev, #next {
+padding: 0px;
+}
+
+.feature {
+    clear: both;
+}
+
+.header {
+    display: flex;
+
+    width: 1200px;
+    min-height: 70px;
+    /*box-sizing: border-box;*/
+    padding: 20px;
+
+    border-bottom: 1px solid #eee;
+    background-image: url(img/ornament.jpg);
+
+    justify-content: space-between;
+    align-content: center;
+}
+
+.info_stat {
+    font-size: 12px;
+    font-style: italic;
+
+    margin-top: 20px;
+}
+
+.statistics {
+    display: flex;
+
+    justify-content: space-between;
+}
+
+#hide {
+    width: 200px;
+    height: 70px;
+    margin: 20px 100px 20px 150px;
+}
+
+.feetback,
+.registration {
+    padding-left: 20px;
+}
+
+.registration input,
+#regions,
+#cities {
+    display: block;
+    width: 410px;
+    font-size: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#regions,
+#cities {
+    font-style: normal;
+    background-color: whitesmoke;
+
+}
+
+
+.registration textarea {
+    width: 400px;
+}
+
+.registration fieldset {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    border: 0 none;
+}
+
+button:hover:enabled {
+    font-size: 18px;
+
+    background-color: #d0a868;
+}
+
+
+
+.main .item img {
+    height: 300px;
+}
+
+button {
+    font-weight: 900;
+    line-height: 24px;
+
+    display: inline-block;
+
+    width: 250px;
+    padding: 10px 31px;
+
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    color: #8c8c8c;
+    border-radius: 12.5px;
+    background-color: #e2d8b0;
+    box-shadow: 0 2px 4.85px .15px rgba(33, 33, 33, .35);
+}
+
+
+.registration button {
+    width: 200px;
+    height: 70px;
+    margin: 50px 30px 20px 0;
+}
+
+
+.button {
+    display: flex;
+
+    justify-content: center;
+}
+
+.button button {
+    margin-right: 30px;
+}
+
+.main-photo {
+    /*text-align: center;*/
+    display: block;
+
+    width: 700px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+
+.registration {
+    margin: 20px;
+    padding: 20px;
+    box-shadow: 0 0 20px #813a06;
+}
+
+.registration {
+    display: flex;
+    transition: background-color 1s ease-in;
+    justify-content: center;
+    align-items: center;
+}
+
+#registr_button {
+    font-size: 18px;
+
+    display: flex;
+
+    width: 404px;
+    height: 100px;
+    margin-top: 20px;
+
+    justify-content: center;
+}
+
+.registration:hover {
+    box-shadow: 0 0 0 2px #d2973d inset, 0 0 0 4px white inset;
+}
+
+.registration input:hover {
+    background-color: antiquewhite;
+}
+
+
+.registration input {
+    font-size: 18px;
+
+    width: 340px;
+
+    transition: background-color 1s ease-in;
+}
+
+.catalog-page .main .item {
+    /*    transition: all 1s;*/
+    transition: all 1s ease-out;
+}
+
+.catalog-page .main .item:hover {
+    /*    transform: rotate(360deg);*/
+    transform: scale(1.7);
+}
+
+input:not([type='checkbox']),
+#regions,
+#cities {
+    font-style: italic;
+    padding: 10px 50px 10px 10px;
+    color: #483d8b;
+    border-radius: 8px;
+}
+
+input:not([type='checkbox']) {
+    text-transform: capitalize;
+}
+
+input:not([type='checkbox']),
+#cities,
+#regions:focus {
+    border-color: #d2973d;
+    border-radius: 8px;
+    outline: none;
+    box-shadow: 1px 1px 0 1px #d2973d;
+    /*font-weight: 700;*/
+}
+
+input[type='checkbox'] {
+    cursor: pointer;
+    transform: scale(2);
+    opacity: .9;
+}
+
+.input[type='text'] {
+    text-transform: capitalize;
+}
+
+.main_image {
+    display: block;
+
+    margin: 0 auto;
+}
+
+.feetback label {
+    margin-left: 20px;
+}
+
+.registration label:hover {
+    font-weight: 700;
+
+    margin-left: 20px;
+}
+
+.required {
+    font-weight: 700;
+
+    border-width: 5px;
+    /*    background-color: blue;*/
+    border-color: burlywood;
+}
+
+.field {
+    position: relative;
+}
+
+.placeholder {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    font-size: 20px;
+    margin: auto;
+
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.red {
+    color: red;
+}
+
+.registration input:invalid,
+.registration textarea:invalid {
+    border-color: red;
+}
+
+.form-control:focus ~ .placeholder,
+.form-control:valid ~ .placeholder {
+    display: none;
+}
+
+.incorrect {
+    border-color: red;
+}
+
+.error textarea {
+    border: 1px solid red;
+}
+
+.error {
+    color: red;
+}
+
+#city_stats {
+    display: none;
+}
+
+.delete,
+#delete {
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 24px;
+
+    display: inline-block;
+
+    width: 100px;
+    height: 50px;
+
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    color: darkblue;
+    border-radius: 12.5px;
+    /* padding: 10px 31px; */
+    background-color: #e6e67282;
+    box-shadow: 0 2px 4.85px .15px rgba(33, 33, 33, .35);
+}
+
+.delete:hover:enabled,
+#delete:hover:enabled {
+    background-color: sandybrown;
+}
+
+#delete {
+    display: block;
+    margin: 40px 20px 0 auto;
+    width: 250px;
+    height: 100px;
+}
+
+
+.manage-feedback {
+    display: flex;
+
+    margin-top: 50px;
+
+    justify-content: center;
+}
+
+footer {
+    display: flex;
+
+    height: 70px;
+    margin-top: 20px;
+
+    background-color: whitesmoke;
+
+    justify-content: flex-end;
+    align-items: center;
+}

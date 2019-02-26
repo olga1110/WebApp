@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Statistics</title>
+    <link rel="stylesheet" type="text/css" href="server_address/style.css">
+    <script async src="server_address/stat.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+            <header>
+                <nav>
+                    <ul class="menu">
+                        <li><a href="server_address">Главная</a></li>
+                        <li><a href="server_address/comment">Добавить комментарий</a></li>
+                        <li><a href="server_address/view">Список комментариев</a></li>
+                        <li> <a href="server_address/stat">Статистика</a>
+                        </li>
+
+                    </ul>
+                </nav>
+            </header>
+            <div class="statistics">
+                <div class="region_stat" id="region_stat">
+                    <table class="view_stat">
+                        <caption>Статистика в&nbsp;разрезе регионов</caption>
+                        <th>Наименование региона</th>
+                        <th>Количество <br> комментариев</th>
+                        stat_data
+                    </table>
+                    <p class="info_stat">*Данные приведены по&nbsp;регионам с&nbsp;общим числом комментариев более&nbsp;5</p>
+                </div>
+                <div id="city_stats">
+                    <table id="city_stat" class="view_stat">
+                        <caption>Статистика в&nbsp;разрезе городов</caption>
+                        <th>Наименование города</th>
+                        <th>Количество <br> комментариев</th>
+                    </table>
+                    <button id="hide" class="delete" onclick="HiddenFunction()">Скрыть</button>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p>&copy;All rights reserved</p>
+        </footer>
+    </div>
+</body>
+
+</html>

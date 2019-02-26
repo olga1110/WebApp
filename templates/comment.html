@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <title>Feedback</title>
+    <link rel="stylesheet" type="text/css" href="server_address/style.css">
+    <script async src="server_address/feedback.js"> </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+            <header>
+                <nav>
+                    <ul class="menu">
+                        <li><a href="server_address">Главная</a></li>
+                        <li><a href="server_address/comment">Добавить комментарий</a></li>
+                        <li><a href="server_address/view">Список комментариев</a></li>
+                        <li> <a href="server_address/stat">Статистика</a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <main class="registr_form">
+                <h1>Ваше мнение важно для нас!</h1>
+                <form action="/send" method="post" class="registration" onsubmit="return validateForm(this)">
+                    <fieldset>
+                        <div class="field">
+                            <input type="text" required id="surname" name="surname" title="Фамилия. Обязательное поле должно содержать не менее 2-х латинских или русских букв" class="check required form-control">
+                            <div class="placeholder">Фамилия <span class="red">*</span></div>
+                        </div>
+                        <div class="field">
+                            <input type="text" required id="name" name="name" title="Имя. Обязательное поле должно содержать не менее 2-х латинских или русских букв" class="check required form-control">
+                            <div class="placeholder">Имя<span class="red">*</span></div>
+                        </div>
+                        <input type="text" name="patronymic" placeholder="Отчество">
+                        <select id="regions" name="region">
+                            <option value="0" selected>Выберите регион</option>
+                            region_options
+                        </select>
+                        <select id="cities" name="city">
+                            <option value="0" selected>Выберите город</option>
+                        </select>
+                        <!-- <p><input type="tel" placeholder="Контактный телефон" id="tel" pattern="\\([0-9]\){3}-[0-9]{7}"></p>-->
+                        <input type="text" name="phone" placeholder="телефон" id="tel" class="check" title="Введите номер в формате: (123)4567890">
+                        <!-- <p><input type="email" placeholder="email" id="email" title=""></p>-->
+
+                        <input type="text" name="email" placeholder="Email" id="email" class="check" title="Неверный формат. Проверьте адрес вашей эл/почты. Пример: example@mail.com">
+                        <div class="field">
+                            <textarea name="comment" required rows="10" cols="30" id="comment" class="check required form-control" title="Обязательное поле. Добавьте ваш комментарий"></textarea>
+                            <div class="placeholder">Комментарий<span class="red">*</span></div>
+                        </div>
+                        <div class="manage-feedback">
+                            <button type="submit" class="delete" id="send_button">Отправить</button>
+                            <button type="reset" class="delete">Очистить</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </main>
+        </div>
+        <footer>
+            <p>&copy;All rights reserved</p>
+        </footer>
+    </div>
+</body>
+
+</html>
